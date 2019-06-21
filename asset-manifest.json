@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/coffe/static/css/main.85b607a5.chunk.css",
-    "main.js": "/coffe/static/js/main.ecc4dde5.chunk.js",
+    "main.js": "/coffe/static/js/main.dfa14761.chunk.js",
     "runtime~main.js": "/coffe/static/js/runtime~main.4c376760.js",
     "static/js/2.b41502e9.chunk.js": "/coffe/static/js/2.b41502e9.chunk.js",
     "index.html": "/coffe/index.html",
-    "precache-manifest.649b4d43a7060cb1506c34b7caf8b4c5.js": "/coffe/precache-manifest.649b4d43a7060cb1506c34b7caf8b4c5.js",
+    "precache-manifest.e758f9aa9d5e631acf157b81cca2519b.js": "/coffe/precache-manifest.e758f9aa9d5e631acf157b81cca2519b.js",
     "service-worker.js": "/coffe/service-worker.js",
     "static/media/logo.svg": "/coffe/static/media/logo.5d5d9eef.svg"
   }
