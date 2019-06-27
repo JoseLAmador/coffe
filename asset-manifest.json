@@ -1,12 +1,15 @@
 {
   "files": {
-    "main.css": "/coffe/static/css/main.85b607a5.chunk.css",
-    "main.js": "/coffe/static/js/main.dfa14761.chunk.js",
+    "main.css": "/coffe/static/css/main.2ca979da.chunk.css",
+    "main.js": "/coffe/static/js/main.ce1cf789.chunk.js",
+    "main.js.map": "/coffe/static/js/main.ce1cf789.chunk.js.map",
     "runtime~main.js": "/coffe/static/js/runtime~main.4c376760.js",
-    "static/js/2.b41502e9.chunk.js": "/coffe/static/js/2.b41502e9.chunk.js",
+    "runtime~main.js.map": "/coffe/static/js/runtime~main.4c376760.js.map",
+    "static/js/2.496781f1.chunk.js": "/coffe/static/js/2.496781f1.chunk.js",
+    "static/js/2.496781f1.chunk.js.map": "/coffe/static/js/2.496781f1.chunk.js.map",
     "index.html": "/coffe/index.html",
-    "precache-manifest.e758f9aa9d5e631acf157b81cca2519b.js": "/coffe/precache-manifest.e758f9aa9d5e631acf157b81cca2519b.js",
+    "precache-manifest.2e6847c2d6284728c6e076ccefa1a4f4.js": "/coffe/precache-manifest.2e6847c2d6284728c6e076ccefa1a4f4.js",
     "service-worker.js": "/coffe/service-worker.js",
-    "static/media/logo.svg": "/coffe/static/media/logo.5d5d9eef.svg"
+    "static/css/main.2ca979da.chunk.css.map": "/coffe/static/css/main.2ca979da.chunk.css.map"
   }
 }
