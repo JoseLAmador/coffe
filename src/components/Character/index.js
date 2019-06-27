@@ -1,8 +1,9 @@
-import React, {Component} from 'react';
+import React from 'react';
+import {Link} from 'react-router-dom';
 
 const Character = ({character}) => {
 
-        const {name, image, url} = character;
+        const {name, image, id} = character;
 
         return(
             <div className="card text-center" >
@@ -15,10 +16,10 @@ const Character = ({character}) => {
                 <h2>{name}</h2>
 
                 <div>
-                    <a 
-                        href={url}
+                    <Link 
+                        to={`/character/${id}`}
                         className="btn btn-dark btn-sm my-1"
-                    >Clic Here</a>
+                    >Show more</Link>
                 </div>
             </div>
         )

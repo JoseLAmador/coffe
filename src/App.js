@@ -1,16 +1,18 @@
 import React from 'react';
 import Header from './components/Header';
 import axios from 'axios';
-import Character from './components/Character';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Characters from './components/Characters';
 import Search from './components/Search';
-
+import About from './components/About';
+import CharacterView from './components/CharacterView';
 
 class App extends React.Component {
 
   state ={
     characters:[],
-    loading: false
+    loading: false,
+    character:{},
   }
 
   async componentDidMount(){
@@ -22,8 +24,6 @@ class App extends React.Component {
       characters: response.data.results,
       loading: false
     })
-    console.log("RESPONSE", response)
-
   }
 
 
@@ -44,34 +44,61 @@ class App extends React.Component {
   })
 
 
+  getCharacter = async (id) => {
+    this.setState({
+      loading: true
+    })
+    const response = await axios.get(`https://rickandmortyapi.com/api/character/${id}`);
+    this.setState({
+      character: response.data,
+      loading: false
+    })
+  }
+
+
 
 
   render(){
 
-    const {characters, loading} = this.state;
-
-    console.log("STATE", this.state)
+    const {characters, loading, character} = this.state;
   
     return (
-      <div className="App">
-        <Header {...{
-          title:"Team Joselus", 
-          icon:"fab fa-github"
-        }} />
+      <Router>
+        <div className="App">
+          <Header {...{
+            title:"Team Joselus", 
+            icon:"fab fa-github"
+          }} />
 
-        <Search
-          searchCharacter={this.searchCharacter}
-          clearCharacters={this.clearCharacters}
-          showClear={characters.length > 0 ? true : false}
-        />
+          <Switch>
+            <Route exact path="/" render={props =>(
+              <React.Fragment>
+                <Search
+                  searchCharacter={this.searchCharacter}
+                  clearCharacters={this.clearCharacters}
+                  showClear={characters.length > 0 ? true : false}
+                />
+                
+                <Characters characters={characters} loading={loading}/>
+              </React.Fragment>
+
+            )} />
+
+            <Route path="/character/:id" render={props=>(
+              <CharacterView {...props} character={character} getCharacter={this.getCharacter} loading={loading} />
+            )} />
+
+            <Route path="/about" component={About} />
+
+          
+
+          </Switch>
+
         
-        <Characters characters={characters} loading={loading}/>
-
-       
-      </div>
+        </div>
       
   
-      
+      </Router>
     );
   }
   
